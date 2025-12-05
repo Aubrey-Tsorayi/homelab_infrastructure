@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6034f1c8476f1feb",
@@ -198,10 +197,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "998dfa9a0b880e78",
+  "active": "e4ff19a64530195e",
   "lastOpenFiles": [
-    "README.md",
-    "TROUBLESHOOTING.md",
+    "docs/README.md",
+    "docs/TROUBLESHOOTING.md",
     "docs/01-setup-control-plane.md",
     "Pasted image 20251205000244.png",
     "Devices and IPs.md",
