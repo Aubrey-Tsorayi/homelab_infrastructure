@@ -1,3 +1,6 @@
 # Ignore LinkedIn posts folder
 linkedin-posts/
 .obsidian/
+# Ignore token file
+token.md
+
