@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Devices and IPs.md",
+                "file": "docs/04-Configuration Management.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Devices and IPs"
+              "title": "04-Configuration Management"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 208.5
+    "width": 208.5,
+    "collapsed": true
   },
   "right": {
     "id": "6034f1c8476f1feb",
@@ -180,7 +181,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,6 +198,8 @@
   },
   "active": "7d0eeaa6c784725d",
   "lastOpenFiles": [
+    "Devices and IPs.md",
+    "docs/04-Configuration Management.md",
     "docs/01-setup-control-plane.md",
     "docs/TROUBLESHOOTING.md",
     "docs/03-IaC.md",
@@ -212,7 +216,6 @@
     "Pasted image 20251208092528.png",
     "token.md",
     "docs/03-IaC",
-    "Devices and IPs.md",
     "README.md",
     "linkedin-posts",
     "docs/README.md"
