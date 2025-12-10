@@ -1,4 +1,4 @@
-# ☁️ Hybrid Cloud & DevOps Infrastructure Lab
+# Home Infrastructure Lab
 
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![Terraform](https://img.shields.io/badge/IaC-Terraform-purple)
@@ -22,21 +22,21 @@ To maximize resource efficiency and simulate a distributed network, I have split
 
 ### 🛠️ Hardware Inventory
 
-| Device | Role | Specs | OS / Hypervisor |
-| :--- | :--- | :--- | :--- |
-| **Dell OptiPlex 7050** | Compute Node | i5-7500T, 16GB DDR4, 256GB NVMe | **Proxmox VE 8.x** |
-| **Raspberry Pi 5** | Control Node | 8GB LPDDR4X | **Ubuntu Server 24.04 LTS** |
+| Device                 | Role         | Specs                           | OS / Hypervisor             |
+| :--------------------- | :----------- | :------------------------------ | :-------------------------- |
+| **Dell OptiPlex 7050** | Compute Node | i5-7500T, 16GB DDR4, 256GB NVMe | **Proxmox VE 9.x**          |
+| **Raspberry Pi 5**     | Control Node | 8GB LPDDR4X                     | **Ubuntu Server 24.04 LTS** |
 
 ---
 
 ## 🔌 Network Topology & IP Management
 
-| Hostname | IP Address | Description | Management |
-| :--- | :--- | :--- | :--- |
-| `pve-host` | `192.168.1.20` | Proxmox Hypervisor | Local GUI |
-| `pi-control` | `192.168.1.10` | Terraform/Ansible Controller | SSH |
-| `vm-docker-01` | `192.168.1.30` | K3s Master / Docker Host | Terraform |
-| `lxc-k3s-w1` | `192.168.1.31` | K3s Worker Node | Proxmox API |
+| Hostname      | IP Address      | Description                  | Management  |
+| :------------ | :-------------- | :--------------------------- | :---------- |
+| `pve-host`    | `192.168.100.2` | Proxmox Hypervisor           | Local GUI   |
+| `pi-control`  | `192.168.100.3` | Terraform/Ansible Controller | SSH         |
+| `docker-host` | `192.168.1.30`  | K3s Master / Docker Host     | Terraform   |
+| `ubuntu-lxc`  | `192.168.1.31`  | K3s Worker Node              | Proxmox API |
 
 ---
 
@@ -58,22 +58,5 @@ To maximize resource efficiency and simulate a distributed network, I have split
 -   **Grafana:** Visualizes cluster health, temperatures, and resource usage.
 -   **Uptime Kuma:** External "ping" monitoring for service uptime.
 
-### Hybrid Cloud
--   **Azure Arc:** Extends Azure management capabilities to the local on-premise servers, allowing for centralized inventory and policy management.
-
 ---
 
-## 📂 Repository Structure
-
-```text
-.
-├── ansible/               # Playbooks for software configuration
-│   ├── inventory/         # Hosts file
-│   └── site.yml           # Main playbook
-├── terraform/             # IaC definitions
-│   ├── main.tf            # Provider and resource inputs
-│   └── variables.tf       # Secrets and customizations
-├── docs/                  # Detailed implementation notes
-│   ├── troubleshooting.md # Log of errors and fixes
-│   └── architecture.md    # Network diagrams
-└── README.md              # You are here
