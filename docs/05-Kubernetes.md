@@ -69,4 +69,3 @@ Date: 2025-12-09
 - Kubernetes will not initialize if the swap is not disabled.
 - [Preparing the container and host for k3s](https://kevingoos.medium.com/kubernetes-inside-proxmox-lxc-cce5c9927942)
 - [Running k3s in the container](https://kevingoos.medium.com/installing-k3s-in-an-lxc-container-2fc24b655b93)
-- 

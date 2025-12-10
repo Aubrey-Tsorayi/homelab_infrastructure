@@ -7,7 +7,8 @@ Date: 2025-12-08
  - [x] Inventory File: Create hosts.ini on the Pi.
     - [x] Add [servers] group containing 192.168.100.30.
     ```
-    
+    [servers]
+    192.168.100.30 ansible_user=docker ansible_ssh_private_key_file=~/.ssh/id_rsa
     ```
 - [x] SSH Handshake: Ensure Pi can SSH into the new VM (using the key defined in Cloud-Init).
 	- `ssh -i ~/.ssh/id_rsa name@<vm-ip>`
